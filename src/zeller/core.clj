@@ -28,7 +28,7 @@
 
 ; Get day of week of beginning of month using Zeller's congruence
 ; https://en.wikipedia.org/wiki/Zeller's_congruence
-(defn get-start-day-of-month [day month year]
+(defn get-day-of-month [day month year]
   (let [zmonth (get-zeller-month month)]
     (get-sunday-indexed-day
       (mod (- (+ day
