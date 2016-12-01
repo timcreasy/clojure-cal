@@ -15,7 +15,10 @@
       month-year-string)))
 
 (defn get-day-of-week-header-string []
-  ("Su Mo Tu We Th Fr Sa\n"))
+  (str "Su Mo Tu We Th Fr Sa\n"))
 
-(defn say-hello [name]
-  (println (str "Hello, " name)))
+(defn print-month [month year]
+  (println
+    (str
+      (get-month-year-header-string month year)
+      (get-day-of-week-header-string))))
